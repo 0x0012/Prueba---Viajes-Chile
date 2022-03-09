@@ -1,3 +1,4 @@
+/* Roboto Google Font */
 html {
     font-family: 'Roboto', sans-serif;
 }
@@ -6,6 +7,8 @@ html {
     font-family: 'Roboto', sans-serif;
 }
 
+/* Fondo negro del proyecto */
 body {
     background-color: black;
+    color: white;
 }
