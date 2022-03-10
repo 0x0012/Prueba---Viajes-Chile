@@ -12,3 +12,20 @@ body {
     background-color: black;
     color: white;
 }
+
+/* Color de fondo y texto del Footer */
+footer {
+    background-color: #0aa2c0;
+    color: white;
+}
+
+/* Quitar formato de enlaces */
+a {
+    text-decoration: none;
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+    color: white;    
+}
