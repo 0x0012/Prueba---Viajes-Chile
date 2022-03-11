@@ -17,6 +17,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <!-- Fontawesome Kit -->
     <script src="https://kit.fontawesome.com/bd460b3357.js" crossorigin="anonymous"></script>
+    <!-- JQuery 3.6 Google CDS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <!-- Mi CSS Style -->
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
@@ -55,7 +57,7 @@
 
     <!-- Header Carousel -->
     <header>
-        <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+        <div id="top" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
                     <img src="assets/img/carousel1.jpg" class="d-block w-100" height="600px">
@@ -167,11 +169,13 @@
         <h5 class="text-center pt-5">Contacto</h5>
         <hr class="border-1 opacity-100" style="background: #0aa2c0">
         <!-- Formulario Typeform -->
-        <div class="pb-4 px-4" data-tf-widget="q1RbQskN" data-tf-iframe-props="title=Viajes Chile"
+        <div class="px-4 pt-2 pb-4" data-tf-widget="q1RbQskN" data-tf-iframe-props="title=Viajes Chile"
             data-tf-medium="snippet" style="width:100%;height:400px;"></div>
+        <script src="//embed.typeform.com/next/embed.js"></script>
         <script src="//embed.typeform.com/next/embed.js"></script>
     </section>
 
+    <!-- Footer con enlace a reds sociales -->
     <footer>
         <div class="row pt-2">
             <h2 class="col-6 sx-auto align-middle text-center">VIAJES CHILE</h2>
@@ -189,5 +193,29 @@
         </div>
     </footer>
 </body>
+
+<script>
+    // JQuery smooth scrolling
+    $('a[href^="#"]').click(function () {
+
+        var el_id = $(this).attr("href");
+
+        $('html, body').animate({
+            scrollTop: $(el_id).offset().top
+        }, 'slow');
+
+        return false;
+    });
+
+    // Colorear fondo de Navbar despues de 550px
+    var nav = document.querySelector('nav');
+    window.addEventListener('scroll', function () {
+        if (window.pageYOffset > 550) {
+            nav.style.backgroundColor = '#0aa2c0';
+        } else {
+            nav.style.backgroundColor = '';
+        }
+    });
+</script>
 
 </html>
